@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>MCS Virtual Card Tokens - Checkout API </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8" />
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/fontawesome/css/all.min.css" />
+
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/jquery.validate.min.js"></script>
+
+    <script src="/assets/js/environment.js"></script>
+
+    <script src="/assets/js/checkout.js"></script>
+    <script src="/assets/js/common.js"></script>
+
+
+    <!-- Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="icon" type="image/svg" href="/assets/images/favicon.svg">
+
+</head>
+
+<body>
+    <div class="container-fluid p-0">
+        <!-- Main Header Start Here -->
+        <nav class="mc-oba-header">
+            <div class="mc-oba-header-left">
+                <img src="/assets/images/mc_symbol_opt_73_3x.png" alt="Mastercard" class="mc-oba-logo" />
+                <a href="https://developer.mastercard.com/mastercard-checkout-solutions/documentation/use-cases/virtual-card-tokens/"
+                    class="mc-oba-developers-link" target="_blank">
+                    developers<i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </a>
+            </div>
+            <div class="mc-oba-header-center">
+                <span class="mc-oba-header-app">REFERENCE APP</span>
+                <span class="mc-oba-header-title">MCS - Virtual Card Tokens</span>
+            </div>
+            <div class="mc-oba-header-right">
+                <a href="https://developer.mastercard.com/mastercard-checkout-solutions/documentation/api-reference/apis/"
+                    class="mc-oba-github-link" target="_blank">
+                    API Reference
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+        </nav>
+        <!-- Main Header End Here -->
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-0 mb-0 api-form-box">
+            <!-- API Name Header Start Here -->
+            <div class="row mb-3 api-name-border pb-3">
+                <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-2 d-flex align-items-center">
+                    <a href="/" class="text-decoration-none">
+                        <img class="back-logo" src="/assets/images/back_icon@2x.png" alt="Back Logo" />
+                    </a>
+                </div>
+                <div
+                    class="col-xl-11 col-lg-11 col-md-11 col-sm-11 col-10 d-flex align-items-center justify-content-center p-0">
+                    <span class="api-name-label"> MCS Virtual Card Tokens - Checkout API </span>
+                </div>
+            </div>
+            <!-- API Name Header End Here -->
+
+
+            <div class="container-fluid p-0 pt-4 pb-0">
+                <h2 class="mc-page-title">Virtual Card Tokens Checkout</h2>
+                <div class="mc-page-subtitle">Perform Virtual Card Tokens Checkout By Card ID</div>
+
+                <span class="mb-3 styled-line"></span>
+            </div>
+            <div class="content">
+                <form id="checkout-form">
+                    <input type="hidden" id="actionMode" value="ADD" />
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label for="xSrcCxFlowId">X-Src-Cx-Flow-Id:
+                                <span data-toggle="tooltip" data-html="true"
+                                    title="<b>Info:<br>Header</b><br>Optional. The X-Src-Cx-Flow-Id ensures to direct all calls from the same client to the same server and maintains session affinity. When you make your initial API call, Secure Card on File responds with the X-Src-Cx-Flow-Id in the header. The X-Src-Cx-Flow-Id returned in this response can be used in the subsequent calls to ensure these calls are directed to the same server that returned the initial response.<br><br>Example: 34f4a04b.7602af12-a18b-4023-a476-8231ddcaefe7.1621276711<br><br>Type: String">
+                                    <i class="fas fa-info-circle"></i>
+                                </span>
+                            </label>
+                            <input type="text" id="xSrcCxFlowId" name="xSrcCxFlowId" class="form-control" value="">
+                        </div>
+
+                        <div class="col-md-6 form-group">
+                            <label for="xSrcResponseHost">X-Src-Response-Host:
+                                <span data-toggle="tooltip" data-html="true"
+                                    title="<b>Info:<br>Header</b><br>Optional. The X-Src-Response-Host is used to direct all calls from the same client to the same server to maintain session affinity. When you make your initial API call, Mastercard Checkout Solutions responds with the X-Src-Response-Host in the HTTP header. The X-Src-Response-Host that is returned will contain a site specific URL that must be used in the subsequent calls to ensure these calls are directed to the same server that returned the initial response.<br><br>Example: https://ksc.services-asn.mastercard.com/<br><br>Type: String">
+                                    <i class="fas fa-info-circle"></i>
+                                </span>
+                            </label>
+                            <input type="text" id="xSrcResponseHost" name="xSrcResponseHost" class="form-control"
+                                value="">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label for="srcClientId">SRC Client Id:
+                                <span data-toggle="tooltip" data-html="true"
+                                    title="<b>Info:</b><br>Required. pattern: ^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$ A unique identifier assigned by Mastercard during onboarding which signifies the responsible party Integrating to Mastercard Checkout Solutions (MCS).<br><br>Required: True<br><br>Example: eccbf087-f159-4d69-b31d-00bec75c0474<br><br>Type: String">
+                                    <i class="fas fa-info-circle"></i>
+                                </span>
+                            </label>
+                            <input type="text" id="srcClientId" name="srcClientId" class="form-control" value=""
+                                required>
+                        </div>
+
+                        <div class="col-md-6 form-group">
+                            <label for="srcDpaId">SRC DPA Id:
+                                <span data-toggle="tooltip" data-html="true"
+                                    title="<b>Info:</b><br>Optional. The registered identifier for the Digital Payment Application (DPA) accessing the service. Conditional: Required if you are a Merchant directly integrating with Mastercard Checkout Solutions (MCS) APIs, a Payment Service Provider (PSP) integrating On-Behalf-Of (OBO) a Merchant, a Payment Facilitator, or if you are enrolling in the Secure Card on File (SCOF) QR program.<br><br>Example: 297b379a-663c-4e31-a019-b3a48701b8ae<br><br>Type: String">
+                                    <i class="fas fa-info-circle"></i>
+                                </span>
+                            </label>
+                            <input type="text" id="srcDpaId" name="srcDpaId" class="form-control" value="">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label for="srcCorrelationId">SRC Correlation Id:
+                                <span data-toggle="tooltip" data-html="true"
+                                    title="<b>Info:</b><br>Optional. pattern: ^([0-9a-f]{8}.)?[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$ A unique identifier that correlates a series of two or more requests to a single session of activity. Mastercard Checkout Solutions (MCS) will return a new srcCorrelationId in each response by default, but Integrators may choose to populate previously used srcCorrelationIds in subsequent requests to correlate their activity under a single ID. This can be done by providing a Mastercard generated srcCorrelationId in the request, or by generating your own ID in the same format. SrcCorrelationId is used for tracking and troubleshooting purposes within Mastercard's ecosystem.<br><br>Example: 779165e0-1905-4edd-89fa-be46497b5044<br><br>Type: String">
+                                    <i class="fas fa-info-circle"></i>
+                                </span>
+                            </label>
+                            <input type="text" id="srcCorrelationId" name="srcCorrelationId" class="form-control"
+                                value="">
+                        </div>
+
+                        <div class="col-md-6 form-group">
+                            <label for="serviceId">Service Id:
+                                <span data-toggle="tooltip" data-html="true"
+                                    title="<b>Info:</b><br>Optional. A unique identifier assigned by Mastercard for which tokens are created uniquely for the entity onboarded.<br><br>Example: SECURE_COF_MERCHANT_OBO#SRC4M-OBO-ALL4PETS#01<br><br>Type: String">
+                                    <i class="fas fa-info-circle"></i>
+                                </span>
+                            </label>
+                            <input type="text" id="serviceId" name="serviceId" class="form-control" value="">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label for="srciTransactionId">Srci Transaction Id:
+                                <span data-toggle="tooltip" data-html="true"
+                                    title="<b>Info:</b><br>Optional. An optional UUID generated by the Integrator that may be passed for internal tracking purposes.<br><br>Max Length: 255<br><br>Example: a5899431-5364-4682-be3d-aba123465a1b<br><br>Type: String">
+                                    <i class="fas fa-info-circle"></i>
+                                </span>
+                            </label>
+                            <input type="text" id="srciTransactionId" name="srciTransactionId" class="form-control"
+                                value="">
+                        </div>
+
+                        <div class="col-md-6 form-group">
+                            <label for="payloadTypeIndicatorCheckout">Payload Type Indicator Checkout:
+                                <span data-toggle="tooltip" data-html="true" title="<b>Info:</b><br>Optional. If it is FULL or PAYMENT client can get full payload (Masked and Unmasked data in encrypted format) in response. If it will be NON_PAYMENT or SUMMARY client can get just Masked data in response. Valid values are
+                                <br>SUMMARY - SUMMARY
+                                <br>FULL - FULL
+                                <br>PAYMENT - PAYMENT
+                                <br>NON_PAYMENT -  NON_PAYMENT
+                                <br><br>Example: SUMMARY
+                                <br><br>Type: String">
+                                    <i class="fas fa-info-circle"></i>
+                                </span>
+                            </label>
+                            <select id="payloadTypeIndicatorCheckout" name="payloadTypeIndicatorCheckout"
+                                class="form-control" value="SUMMARY"></select>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label for="recipientIdCheckout">Recipient Id Checkout:
+                                <span data-toggle="tooltip" data-html="true"
+                                    title="<b>Info:</b><br>Optional. pattern: ^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$ An SRC Client ID assigned to the Integrator by Mastercard during onboarding for the Mastercard Merchant Present QR : SRC program.<br><br>Example: 297b379a-663c-4e31-a019-b3a48701b8ae<br><br>Type: String">
+                                    <i class="fas fa-info-circle"></i>
+                                </span>
+                            </label>
+                            <input type="text" id="recipientIdCheckout" name="recipientIdCheckout" class="form-control"
+                                value="">
+                        </div>
+
+                        <div class="col-md-6 form-group">
+                            <label for="srcDigitalCardId">SRC Digital Card Id:
+                                <span data-toggle="tooltip" data-html="true"
+                                    title="<b>Info:</b><br>Optional. A unique identifier that represents the token associated with a card enrolled into Mastercard Checkout Solutions (MCS). Use this srcDigitalCardId in subsequent checkout requests to retrieve a DSRP payload containing the associated token and cryptogram for payment authorization. Alternatively, use the srcDigitalCardId in a get card request to retrieve the maskedCard details.<br><br>Example: 61XJzB_BQ9qa29nGa7JZrQ000000000000US<br><br>Type: String">
+                                    <i class="fas fa-info-circle"></i>
+                                </span>
+                            </label>
+                            <input type="text" id="srcDigitalCardId" name="srcDigitalCardId" class="form-control"
+                                value="">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label for="keyFingerprintId">key Fingerprint Id:
+                                <span data-toggle="tooltip" data-html="true"
+                                    title="<b>Info:</b><br>Optional. Mastercard will use the encryption key associated with the supplied KID to encrypt the payload. If not supplied, the key which is marked as default will be used.<br><br>Example: nwzNuN9upxolVsr6q0I/phcnfA/ZlaJ2gmAJiogMCwM<br><br>Type: String">
+                                    <i class="fas fa-info-circle"></i>
+                                </span>
+                            </label>
+                            <input type="text" id="keyFingerprintId" name="keyFingerprintId" class="form-control"
+                                value="">
+                        </div>
+                    </div>
+
+
+                    <h3 class="">DPA Transaction Options</h3>
+                    <span class="mb-3 styled-line"></span>
+
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label for="merchantCategoryCode">Merchant Category Code:
+                                <span data-toggle="tooltip" data-html="true"
+                                    title="<b>Info:</b><br>Optional. Describes the merchant’s type of business, product or service. The same value is expected in the authorization request. Conditional: Required for Token Authentication Framework<br><br>Example: 4444<br><br>Type: String">
+                                    <i class="fas fa-info-circle"></i>
+                                </span>
+                            </label>
+                            <input type="text" id="merchantCategoryCode" name="merchantCategoryCode"
+                                class="form-control" value="">
+                        </div>
+
+                        <div class="col-md-6 form-group">
+                            <label for="merchantCountryCode">Merchant Country Code:
+                                <span data-toggle="tooltip" data-html="true"
+                                    title="<b>Info:</b><br>Optional. format: ISO 3166 alpha 2Country code of the merchant.Conditional: Required for Token Authentication Framework<br><br>Example: US<br><br>Type: String">
+                                    <i class="fas fa-info-circle"></i>
+                                </span>
+                            </label>
+                            <input type="text" id="merchantCountryCode" name="merchantCountryCode" class="form-control"
+                                value="">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label for="threeDsPreference">ThreeDs Preference:
+                                <span data-toggle="tooltip" data-html="true" title="<b>Info:</b><br>Optional. Valid values are
+                                <br>NONE - NONE
+                                <br>SELF - SELF
+                                <br>ONBEHALF - ONBEHALF
+                                <br><br>Example: NONE
+                                <br><br>Type: String">
+                                    <i class="fas fa-info-circle"></i>
+                                </span>
+                            </label>
+                            <select id="threeDsPreference" name="threeDsPreference" class="form-control"
+                                value="NONE"></select>
+                        </div>
+
+                        <div class="col-md-6 form-group">
+                            <label for="dpaLocale">DPA Locale:
+                                <span data-toggle="tooltip" data-html="true"
+                                    title="<b>Info:</b><br>Optional. Merchant's preferred locale.<br><br>Example: en_US<br><br>Type: String">
+                                    <i class="fas fa-info-circle"></i>
+                                </span>
+                            </label>
+                            <input type="text" id="dpaLocale" name="dpaLocale" class="form-control" value="">
+                        </div>
+                    </div>
+
+                    <h3 class="">Transaction Data</h3>
+                    <span class="mb-3 styled-line"></span>
+
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label for="transactionAmount">Transaction Amount:
+                                <span data-toggle="tooltip" data-html="true"
+                                    title="<b>Info:</b><br>Required. Numeric value of transaction amount and must be positive. Fractions, if present in the transaction amount value, will be affixed with zero/s to match the minor unit of transaction currency in question. Maximum value allowed will be 13 digits (including decimal point and affixed fractions).<br><br>Required: Yes<br><br>Minimum: 0<br><br>Example: 150.00<br><br>Type: Number">
+                                    <i class="fas fa-info-circle"></i>
+                                </span>
+                            </label>
+                            <input type="number" id="transactionAmount" name="transactionAmount" class="form-control"
+                                value="10" required>
+                        </div>
+
+                        <div class="col-md-6 form-group">
+                            <label for="transactionCurrencyCode">Transaction Currency Code:
+                                <span data-toggle="tooltip" data-html="true"
+                                    title="<b>Info:</b><br>Required. ISO 4217 three-digit currency code for the transaction.<br><br>Required: Yes<br><br>Example: USD<br><br>Type: String">
+                                    <i class="fas fa-info-circle"></i>
+                                </span>
+                            </label>
+                            <input type="text" id="transactionCurrencyCode" name="transactionCurrencyCode"
+                                class="form-control" value="USD" required>
+                        </div>
+                    </div>
+
+                    <h3 class="">ThreeDs Input Data - Browser Details</h3>
+                    <span class="mb-3 styled-line"></span>
+
+
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label for="acceptHeader">Accept Header:
+                                <span data-toggle="tooltip" data-html="true"
+                                    title="<b>Info:</b><br>Optional. Exact content of the HTTP accept headers as sent to the 3-D Secure (3DS) requestor from the Cardholder's browser.<br><br>Example: application/json, text/plain, /<br><br>Type: String">
+                                    <i class="fas fa-info-circle"></i>
+                                </span>
+                            </label>
+                            <input type="text" id="acceptHeader" name="acceptHeader" class="form-control" value="">
+                        </div>
+
+                        <div class="col-md-6 form-group optional-dpa-section">
+                            <label for="javaEnabled">Java Enabled:
+                                <span data-toggle="tooltip" data-html="true"
+                                    title="<b>Info:</b><br>Optional. Boolean that represents the ability of the Cardholder's browser to execute java.<br><br>Example: true<br><br>Type: Boolean">
+                                    <i class="fas fa-info-circle"></i>
+                                </span>
+                            </label>
+                            <select id="javaEnabled" name="javaEnabled" class="form-control">
+                                <option value="" selected>--Select--</option>
+                                <option value="true">True</option>
+                                <option value="false">False</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 form-group optional-dpa-section">
+                            <label for="javascriptEnabled">Javascript Enabled:
+                                <span data-toggle="tooltip" data-html="true"
+                                    title="<b>Info:</b><br>Optional. Boolean that represents the ability of the Cardholder's browser to execute JavaScript.<br><br>Example: true<br><br>Type: Boolean">
+                                    <i class="fas fa-info-circle"></i>
+                                </span>
+                            </label>
+                            <select id="javascriptEnabled" name="javascriptEnabled" class="form-control">
+                                <option value="" selected>--Select--</option>
+                                <option value="true">True</option>
+                                <option value="false">False</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-6 form-group">
+                            <label for="ip">IP:
+                                <span data-toggle="tooltip" data-html="true"
+                                    title="<b>Info:</b><br>Optional. IP address of the browser as returned by the HTTP headers to the 3-D Secure (3DS) requestor.<br><br>Example: ***.***.***.***<br><br>Type: String">
+                                    <i class="fas fa-info-circle"></i>
+                                </span>
+                            </label>
+                            <input type="text" id="ip" name="ip" class="form-control" value="">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label for="language">Language:
+                                <span data-toggle="tooltip" data-html="true"
+                                    title="<b>Info:</b><br>Optional. Value representing the browser language as defined in IETF BCP47.<br><br>Example: en-US<br><br>Type: String">
+                                    <i class="fas fa-info-circle"></i>
+                                </span>
+                            </label>
+                            <input type="text" id="language" name="language" class="form-control" value="">
+                        </div>
+
+                        <div class="col-md-6 form-group">
+                            <label for="colorDepth">Color Depth:
+                                <span data-toggle="tooltip" data-html="true"
+                                    title="<b>Info:</b><br>Optional. Value representing the bit depth of the colour palette for displaying images, in bits per pixel.<br><br>Example: 24<br><br>Type: String">
+                                    <i class="fas fa-info-circle"></i>
+                                </span>
+                            </label>
+                            <input type="text" id="colorDepth" name="colorDepth" class="form-control" value="">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label for="screenHeight">Screen Height:
+                                <span data-toggle="tooltip" data-html="true"
+                                    title="<b>Info:</b><br>Optional. Total height of the Cardholder’s screen in pixels.<br><br>Example: 864<br><br>Type: String">
+                                    <i class="fas fa-info-circle"></i>
+                                </span>
+                            </label>
+                            <input type="text" id="screenHeight" name="screenHeight" class="form-control" value="">
+                        </div>
+
+                        <div class="col-md-6 form-group">
+                            <label for="screenWidth">Screen Width:
+                                <span data-toggle="tooltip" data-html="true"
+                                    title="<b>Info:</b><br>Optional. Total width of the Cardholder’s screen in pixels.<br><br>Example: 1000<br><br>Type: String">
+                                    <i class="fas fa-info-circle"></i>
+                                </span>
+                            </label>
+                            <input type="text" id="screenWidth" name="screenWidth" class="form-control" value="">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label for="tz">Time Zone:
+                                <span data-toggle="tooltip" data-html="true"
+                                    title="<b>Info:</b><br>Optional. Time-zone offset in minutes between UTC and the Cardholder browser local time.<br><br>Example: -2<br><br>Type: String">
+                                    <i class="fas fa-info-circle"></i>
+                                </span>
+                            </label>
+                            <input type="text" id="tz" name="tz" class="form-control" value="">
+                        </div>
+
+                        <div class="col-md-6 form-group">
+                            <label for="userAgent">User Agent:
+                                <span data-toggle="tooltip" data-html="true"
+                                    title="<b>Info:</b><br>Optional. Exact content of the HTTP user-agent header.<br><br>Example: Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:47.0) Gecko/20100101 Firefox/47.0<br><br>Type: String">
+                                    <i class="fas fa-info-circle"></i>
+                                </span>
+                            </label>
+                            <input type="text" id="userAgent" name="userAgent" class="form-control" value="">
+                        </div>
+                    </div>
+
+                    <h3 class="">ThreeDs Input Data - Acquirer Details</h3>
+                    <span class="mb-3 styled-line"></span>
+
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label for="bin">BIN:
+                                <span data-toggle="tooltip" data-html="true"
+                                    title="<b>Info:</b><br>Optional. Unique identification code for the bank of the Merchant. This field is used to route payments to the proper institution.<br><br>Example: 545301<br><br>Type: String">
+                                    <i class="fas fa-info-circle"></i>
+                                </span>
+                            </label>
+                            <input type="text" id="bin" name="bin" class="form-control" value="">
+                        </div>
+
+                        <div class="col-md-6 form-group">
+                            <label for="merchantID">Merchant ID:
+                                <span data-toggle="tooltip" data-html="true"
+                                    title="<b>Info:</b><br>Optional. Acquirer-assigned Merchant ID used by the Acquirer to identify the Merchant.<br><br>Example: 550e8400<br><br>Type: String">
+                                    <i class="fas fa-info-circle"></i>
+                                </span>
+                            </label>
+                            <input type="text" id="merchantID" name="merchantID" class="form-control" value="">
+                        </div>
+                    </div>
+
+                    <h3>Src TokenRequest Data</h3>
+                    <span class="mb-3 styled-line"></span>
+
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label for="unpredictableNumber">Unpredictable Number:
+                                <span data-toggle="tooltip" data-html="true"
+                                    title="<b>Info:</b><br>Optional. pattern: ^[0-9a-fA-F]+$ Optional four-byte binary data that can be randomly generated by the Integrator and base64 encoded to provide variability and uniqueness to the generation of a cryptogram.<br><br>Max Length: 8<br><br>Example: fa9e0426<br><br>Type: String">
+                                    <i class="fas fa-info-circle"></i>
+                                </span>
+                            </label>
+                            <input type="text" id="unpredictableNumber" name="unpredictableNumber" class="form-control"
+                                value="">
+                        </div>
+                    </div>
+
+                    <h3>Payment Options Data</h3>
+                    <span class="mb-3 styled-line"></span>
+
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label for="dynamicDataType">Dynamic Data Type:
+                                <span data-toggle="tooltip" data-html="true" title="<b>Info:</b><br>Optional. Type of dynamic data required by the integrator to support a checkout request. Must be set to DYNAMIC_CARD_SECURITY_CODE. Valid values are
+                                <br>DYNAMIC_CARD_SECURITY_CODE - (DTVC): The DTVC -Dynamic Token Verification Code is a one-time dynamic verification code. The code is 3-digits in length. Integrators should pass this value in the CVC2 field during payment authorization.
+                                <br><br>Example: DYNAMIC_CARD_SECURITY_CODE
+                                <br><br>Type: String">
+                                    <i class="fas fa-info-circle"></i>
+                                </span>
+                            </label>
+                            <select id="dynamicDataType" name="dynamicDataType" class="form-control"
+                                value="DYNAMIC_CARD_SECURITY_CODE"></select>
+                        </div>
+                    </div>
+
+                    <h3 class="">Assurance & Verification Data</h3>
+                    <span class="mb-3 styled-line"></span>
+
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label for="verificationType">Verification Type:
+                                <span data-toggle="tooltip" data-html="true" title="<b>Info:</b><br>Required. Type of authentication carried out on the entity. Currently, Mastercard Checkout Solutions (MCS) only supports 'CARDHOLDER'. Valid value includes
+                                <br>CARDHOLDER
+                                <br><br>Example: CARDHOLDER
+                                <br><br>Required: True
+                                <br><br>Type: String">
+                                    <i class="fas fa-info-circle"></i>
+                                </span>
+                            </label>
+                            <select id="verificationType" name="verificationType" class="form-control"
+                                value=""></select>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label for="verificationEntity">Verification Entity:
+                                <span data-toggle="tooltip" data-html="true" title="<b>Info:</b><br>Required. Entity performing or initiating Cardholder authentication (e.g., Mastercard Checkout Solutions (MCS) System = '02'). Valid value includes
+                                <br>01 - Integrator
+                                <br>02 -  Mastercard Checkout Solutions (MCS)
+                                <br>03 - Participating Issuer
+                                <br>06 - Others
+                                <br><br>Example: 01
+                                <br><br>Required: True
+                                <br><br>Type: String">
+                                    <i class="fas fa-info-circle"></i>
+                                </span>
+                            </label>
+                            <select id="verificationEntity" name="verificationEntity" class="form-control"
+                                value=""></select>
+                        </div>
+
+                        <div class="col-md-6 form-group">
+                            <label for="verificationMethod">Verification Method:
+                                <span data-toggle="tooltip" data-html="true" title="<b>Info:</b><br>Required. Cardholder authentication method used by the Issuer (e.g., 3-D Secure (3DS) ACS = '01'). Valid value includes
+                                <br>01 - 3-D Secure (3DS) ACS
+                                <br>06 - Proprietary method of authentication
+                                <br>04 - A shared secret between the Card Issuer and the Cardholder such as One Time Passcode (OTP), activation code
+                                <br><br>Example: 01
+                                <br><br>Required: True
+                                <br><br>Type: String">
+                                    <i class="fas fa-info-circle"></i>
+                                </span>
+                            </label>
+                            <select id="verificationMethod" name="verificationMethod" class="form-control"
+                                value=""></select>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label for="verificationResults">Verification Results:
+                                <span data-toggle="tooltip" data-html="true" title="<b>Info:</b><br>Required. Indicates whether the Cardholder was verified or not, and what the results are when verified. Results can be. Valid value includes
+                                <br>01 - Verified
+                                <br>02 - Not Verified
+                                <br>03 - Not Performed
+                                <br>04 - Not Required
+                                <br><br>Example: 01
+                                <br><br>Required: True
+                                <br><br>Type: String">
+                                    <i class="fas fa-info-circle"></i>
+                                </span>
+                            </label>
+                            <select id="verificationResults" name="verificationResults" class="form-control"
+                                value=""></select>
+                        </div>
+
+                        <div class="col-md-6 form-group">
+                            <label for="verificationTimestamp">Verification Timestamp:
+                                <span data-toggle="tooltip" data-html="true"
+                                    title="<b>Info:</b><br>Required. Date and time when the verification was conducted. Format Epoch UTC Seconds.<br><br>Required: True<br><br>Example: 1633632285<br><br>Type: String">
+                                    <i class="fas fa-info-circle"></i>
+                                </span>
+                            </label>
+                            <input type="text" id="verificationTimestamp" name="verificationTimestamp"
+                                class="form-control" value="">
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label for="additionalData">Additional Data:
+                                <span data-toggle="tooltip" data-html="true"
+                                    title="<b>Info:</b><br>Optional. Object for data collected during Cardholder verification. The format may vary based on authentication method used.<br><br>Format: byte<br><br>Example: eyJ0eXBlIjoiUFJPUFJJRVRBUlkiLCJjZXJ0aWZpZWRNZmFNZXRob2RJZCI6IjQzU0E1IiwiZXh0ZXJuYWxNZmFNZXRob2RJbnN0YW5jZUlkIjoiYmY4YzViMmItMjhjZS00OGQ4LWFjYmMtY2M4<br><br>Type: String">
+                                    <i class="fas fa-info-circle"></i>
+                                </span>
+                            </label>
+                            <input type="text" id="additionalData" name="additionalData" class="form-control" value="">
+                        </div>
+
+                        <div class="col-md-6 form-group">
+                            <label for="verificationEvents">Verification Events:
+                                <span data-toggle="tooltip" data-html="true" title="<b>Info:</b><br>Optional. Event that prompted the Cardholder authentication (e.g., Payment Transaction = '01'). Valid value includes
+                                <br>01 - Payment Transaction
+                                <br>02 - Add Card/Card Enrollment
+                                <br><br>Example: 01
+                                <br><br>Required: True
+                                <br><br>Type: String">
+                                    <i class="fas fa-info-circle"></i>
+                                </span>
+                            </label>
+                            <select id="verificationEvents" name="verificationEvents" class="form-control"
+                                value=""></select>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12 form-group">
+                            <button type="button" id="add-verification-data-btn" class="btn btn-secondary mt-2">+ Add
+                                Verification Data</button>
+                        </div>
+                    </div>
+
+                    <div id="verification-data-list"></div>
+
+                    <h3 class="">DPA Data</h3>
+                    <span class="mb-3 styled-line"></span>
+
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label for="dpaPresentationName">DPA Presentation Name:
+                                <span data-toggle="tooltip" data-html="true"
+                                    title="<b>Info:</b><br>Optional. 'doing business as' name. Conditional: Required for Token Authentication Framework<br><br>Max Length: 60<br><br>Example: Mastercard Inc<br><br>Type: String">
+                                    <i class="fas fa-info-circle"></i>
+                                </span>
+                            </label>
+                            <input type="text" id="dpaPresentationName" name="dpaPresentationName" class="form-control"
+                                value="">
+                        </div>
+
+                        <div class="col-md-6 form-group">
+                            <label for="dpaName">DPA Name:
+                                <span data-toggle="tooltip" data-html="true"
+                                    title="<b>Info:</b><br>Optional - Legal name of registered DPA.<br><br>Max Length: 60<br><br>Example: Mastercard<br><br>Type: String">
+                                    <i class="fas fa-info-circle"></i>
+                                </span>
+                            </label>
+                            <input type="text" id="dpaName" name="dpaName" class="form-control" value="">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label for="dpaUri">DPA URI:
+                                <span data-toggle="tooltip" data-html="true"
+                                    title="<b>Info:</b><br>Optional - Unique DPA Identifier, such as UUID, URL, APK package name etc.<br><br>Max Length: 1024<br><br>Example: www.mastercard.com<br><br>Type: String">
+                                    <i class="fas fa-info-circle"></i>
+                                </span>
+                            </label>
+                            <input type="text" id="dpaUri" name="dpaUri" class="form-control" value="">
+                        </div>
+                    </div>
+
+                    <h3 class="">Acceptance Channel Related Data</h3>
+                    <span class="mb-3 styled-line"></span>
+
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label for="acceptanceChannelType">Acceptance Channel Type:
+                                <span data-toggle="tooltip" data-html="true" title="<b>Info:</b><br>Required. Type of acceptance channel data. Valid value includes
+                                <br>EMV_MERCHANT_PRESENTED_MODE - EMV_MERCHANT_PRESENTED_MODE
+                                <br><br>Example: EMV_MERCHANT_PRESENTED_MODE
+                                <br><br>Required: True
+                                <br><br>Type: String">
+                                    <i class="fas fa-info-circle"></i>
+                                </span>
+                            </label>
+                            <select id="acceptanceChannelType" name="acceptanceChannelType" class="form-control"
+                                value="EMV_MERCHANT_PRESENTED_MODE"></select>
+                        </div>
+
+                        <div class="col-md-6 form-group">
+                            <label for="acceptanceChannelTechnology">Acceptance Channel Technology:
+                                <span data-toggle="tooltip" data-html="true" title="<b>Info:</b><br>Optional. Technology used to transmit/receive the acceptance channel data. Valid value includes
+                                <br>QR_CODE - QR_CODE
+                                <br>NFC - NFC 
+                                <br>WIFI - WIFI
+                                <br>BLUETOOTH - BLUETOOTH
+                                <br>INTENT - INTENT
+                                <br>SOUND - SOUND
+                                <br><br>Example: QR_CODE
+                                <br><br>Required: True
+                                <br><br>Type: String">
+                                    <i class="fas fa-info-circle"></i>
+                                </span>
+                            </label>
+                            <select id="acceptanceChannelTechnology" name="acceptanceChannelTechnology"
+                                class="form-control" value=""></select>
+                        </div>
+                    </div>
+
+                    <h3 class="">Acceptance Channel - Consumer Data</h3>
+                    <span class="mb-3 styled-line"></span>
+
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label for="billNumber">Bill Number:
+                                <span data-toggle="tooltip" data-html="true"
+                                    title="<b>Info:</b><br>Optional. The invoice number or bill number. This number could be provided by the merchant or could be an indication for the mobile application to prompt the consumer to input a Bill Number. For example, the Bill Number may be present when the QR Code is used for bill payment.<br><br>Example: 543215465132123<br><br>Type: String">
+                                    <i class="fas fa-info-circle"></i>
+                                </span>
+                            </label>
+                            <input type="text" id="billNumber" name="billNumber" class="form-control" value="">
+                        </div>
+
+                        <div class="col-md-6 form-group">
+                            <label for="mobileNumber">Mobile Number:
+                                <span data-toggle="tooltip" data-html="true"
+                                    title="<b>Info:</b><br>Optional. The mobile number could be provided by the merchant or could be an indication for the mobile application to prompt the consumer to input a Mobile Number. For example, the Mobile Number to be used for multiple use cases, such as mobile top-up and bill payment.<br><br>Example: 917-222-3333<br><br>Type: String">
+                                    <i class="fas fa-info-circle"></i>
+                                </span>
+                            </label>
+                            <input type="text" id="mobileNumber" name="mobileNumber" class="form-control" value="">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label for="storeLabel">Store Label:
+                                <span data-toggle="tooltip" data-html="true"
+                                    title="<b>Info:</b><br>Optional. A distinctive value associated to a store. This value could be provided by the merchant or could be an indication for the mobile application to prompt the consumer to input a Store Label. For example, the Store Label may be displayed to the consumer on the mobile application identifying a specific store.<br><br>Example: HELCO123<br><br>Type: String">
+                                    <i class="fas fa-info-circle"></i>
+                                </span>
+                            </label>
+                            <input type="text" id="storeLabel" name="storeLabel" class="form-control" value="">
+                        </div>
+
+                        <div class="col-md-6 form-group">
+                            <label for="loyaltyNumber">Loyalty Number:
+                                <span data-toggle="tooltip" data-html="true"
+                                    title="<b>Info:</b><br>Optional. Typically, a loyalty card number. This number could be provided by the merchant, if known, or could be an indication for the mobile application to prompt the consumer to input their Loyalty Number.<br><br>Example: 121123243<br><br>Type: String">
+                                    <i class="fas fa-info-circle"></i>
+                                </span>
+                            </label>
+                            <input type="text" id="loyaltyNumber" name="loyaltyNumber" class="form-control" value="">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label for="referenceLabel">Reference Label:
+                                <span data-toggle="tooltip" data-html="true"
+                                    title="<b>Info:</b><br>Optional. Any value as defined by the merchant or acquirer in order to identify the transaction. This value could be provided by the merchant or could be an indication for the mobile app to prompt the consumer to input a transaction Reference Label. For example, the Reference Label may be used by the consumer mobile application for transaction logging or receipt display.<br><br>Example: D1333444<br><br>Type: String">
+                                    <i class="fas fa-info-circle"></i>
+                                </span>
+                            </label>
+                            <input type="text" id="referenceLabel" name="referenceLabel" class="form-control" value="">
+                        </div>
+
+                        <div class="col-md-6 form-group">
+                            <label for="customerLabel">Customer Label:
+                                <span data-toggle="tooltip" data-html="true"
+                                    title="<b>Info:</b><br>Optional. Any value identifying a specific consumer. This value could be provided by the merchant (if known), or could be an indication for the mobile application to prompt the consumer to input their Customer Label. For example, the Customer Label may be a subscriber ID for subscription services, a student enrolment number, etc.<br><br>Example: C128G324<br><br>Type: String">
+                                    <i class="fas fa-info-circle"></i>
+                                </span>
+                            </label>
+                            <input type="text" id="customerLabel" name="customerLabel" class="form-control" value="">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label for="terminalLabel">Terminal Label:
+                                <span data-toggle="tooltip" data-html="true"
+                                    title="<b>Info:</b><br>Optional. Populated with a Consumer-entered terminal label if the Terminal Label (ID '07'), with a value of '***'', is present within the Additional Data Field Template (ID '62') of the QR Code Payload.<br><br>Example: QR@#424<br><br>Type: String">
+                                    <i class="fas fa-info-circle"></i>
+                                </span>
+                            </label>
+                            <input type="text" id="terminalLabel" name="terminalLabel" class="form-control" value="">
+                        </div>
+
+                        <div class="col-md-6 form-group">
+                            <label for="purposeOftransaction">Purpose Of transaction:
+                                <span data-toggle="tooltip" data-html="true"
+                                    title="<b>Info:</b><br>Optional. Any value identifying a specific consumer. This value could be provided by the merchant (if known), or could be an indication for the mobile application to prompt the consumer to input their Customer Label. For example, the Customer Label may be a subscriber ID for subscription services, a student enrolment number, etc.<br><br>Example: C1333444<br><br>Type: String">
+                                    <i class="fas fa-info-circle"></i>
+                                </span>
+                            </label>
+                            <input type="text" id="purposeOftransaction" name="purposeOftransaction"
+                                class="form-control" value="">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label for="emailId">Email ID:
+                                <span data-toggle="tooltip" data-html="true"
+                                    title="<b>Info:</b><br>Optional. Email address of the consumer.<br><br>Example: johndoe@mail.com<br><br>Type: String">
+                                    <i class="fas fa-info-circle"></i>
+                                </span>
+                            </label>
+                            <input type="text" id="emailId" name="emailId" class="form-control" value="">
+                        </div>
+
+                        <div class="col-md-6 form-group">
+                            <label for="phoneNumber">Phone Number:
+                                <span data-toggle="tooltip" data-html="true"
+                                    title="<b>Info:</b><br>Optional. Mobile number of the consumer.<br><br>Example: 888-213-3432<br><br>Type: String">
+                                    <i class="fas fa-info-circle"></i>
+                                </span>
+                            </label>
+                            <input type="text" id="phoneNumber" name="phoneNumber" class="form-control" value="">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label for="address">Address:
+                                <span data-toggle="tooltip" data-html="true"
+                                    title="<b>Info:</b><br>Optional. Address of the consumer.<br><br>Example: 1st Some Avenue, The Causeway, NYC, NY 10011<br><br>Type: String">
+                                    <i class="fas fa-info-circle"></i>
+                                </span>
+                            </label>
+                            <input type="text" id="address" name="address" class="form-control" value="">
+                        </div>
+                    </div>
+
+                    <h3 class="">Acceptance Channel - Seller Data</h3>
+                    <span class="mb-3 styled-line"></span>
+
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label for="qrCodeData">QR Code Data:
+                                <span data-toggle="tooltip" data-html="true"
+                                    title="<b>Info:</b><br>Optional. QR code string.<br><br>Example: 000201010211051904151234567890123455204502453038405405100.05802US5913TestMerchant6008New York6208030412346304570E<br><br>Type: String">
+                                    <i class="fas fa-info-circle"></i>
+                                </span>
+                            </label>
+                            <input type="text" id="qrCodeData" name="qrCodeData" class="form-control" value="">
+                        </div>
+                    </div>
+
+
+                    <h3>Digital Account Credentials</h3>
+                    <span class="mb-3 styled-line"></span>
+
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label for="digitalAccountReferenceValue">Digital Account Reference Value:
+                                <span data-toggle="tooltip" data-html="true"
+                                    title="<b>Info:</b><br>Required. This value corresponds to the chosen digitalAccountReferenceType and is used by Integrators who would like to enroll the underlying card. If digitalAccountReferenceType = ENCRYPTED_CARD, this field should carry the JWE[card]. The card must be encrypted using the steps in this tutorial- https://developer.mastercard.com/mastercard-checkout-solutions/tutorial/perform-encryption/. If digitalAccountReferenceType = SRC_DIGITAL_CARD_ID, this field should carry the srcDigitalCardId value.<br><br>Example: eyJraWQiOiIxNDkwNjQtc3RnLXNyYy1mcGFuLWVuY3J5cHRpb24iLCJlbmMiOiJBMTI4R0NNIiwiYWxnIjoiUlNBLU9BRVAtMjU2In0.iLovKOMnT11BKASjmkvqR5d_ApojucBiG9tAuH5Qt2hRAu31-oUiEiGC5ctJ2s2OM7UUSlnuB7DHqFxhCTSbUsQ0cyUTLQ4lR9-t1c4KamR-<br><br>Type: String">
+                                    <i class="fas fa-info-circle"></i>
+                                </span>
+                            </label>
+                            <input type="text" id="digitalAccountReferenceValue" name="digitalAccountReferenceValue"
+                                class="form-control"
+                                value=""
+                                >
+                        </div>
+
+                        <div class="col-md-6 form-group">
+                            <label for="digitalAccountReferenceType">Digital Account Reference Type:
+                                <span data-toggle="tooltip" data-html="true" title="<b>Info:</b><br>Required. Type of digitalAccountReferenceValue being passed to Mastercard Checkout Solutions (MCS) for enrollment. The digitalAccountReferenceType will dictate the content of the digitalAccountReferenceValue parameter. Accepted enums are:
+                                <br>ENCRYPTED_CARD - Encrypted object for card data.
+                                <br>SRC_DIGITAL_CARD_ID - A unique identifier that represents the token associated with a card enrolled into Mastercard Checkout Solutions (MCS).
+                                <br>ENCRYPTED_PAYMENT_TOKEN - Encrypted object for token.
+                                <br><br>Example: ENCRYPTED_CARD
+                                <br><br>Type: String">
+                                    <i class="fas fa-info-circle"></i>
+                                </span>
+                            </label>
+                            <select id="digitalAccountReferenceType" name="digitalAccountReferenceType"
+                                class="form-control" value="ENCRYPTED_CARD"></select>
+                        </div>
+
+                        <div class="col-md-6 form-group d-flex align-items-center">
+                            <button type="button" class="btn submit-btn" data-toggle="modal"
+                                data-target="#encryptCardModal">ENCRYPT CARD</button>
+                        </div>
+
+
+                    </div>
+
+                    <button type="submit" class="btn submit-btn">Submit</button>
+                    <span class="mb-3 mt-5 styled-line"></span>
+                </form>
+
+                <div class="api-object-card mt-4" style="display: none;">
+                    <div class="api-object-header">
+                        <span class="api-object-icon"><i class="fa-solid fa-arrow-right"></i></span>
+                        Request Headers
+                        <button type="button" class="copy-json-btn" data-target="#requestHeadersContent" title="Copy">
+                            <i class="fa fa-copy"></i>
+                        </button>
+                    </div>
+                    <pre class="api-json-block" id="requestHeadersContent"></pre>
+                </div>
+
+                <div class="api-object-card mt-4">
+                    <div class="api-object-header">
+                        <span class="api-object-icon"><i class="fa-solid fa-code"></i></span>
+                        Request Object
+                        <button type="button" class="copy-json-btn" data-target="#requestBodyContent" title="Copy">
+                            <i class="fa fa-copy"></i>
+                        </button>
+                    </div>
+                    <pre class="api-json-block" id="requestBodyContent"></pre>
+                </div>
+
+                <div class="api-object-card mt-4">
+                    <div class="api-object-header">
+                        <span class="api-object-icon"><i class="fa-solid fa-code-branch"></i></span>
+                        Response Object
+                        <button type="button" class="copy-json-btn" data-target="#responseContent" title="Copy">
+                            <i class="fa fa-copy"></i>
+                        </button>
+                    </div>
+                    <pre class="api-json-block" id="responseContent"></pre>
+                </div>
+
+                <div class="api-object-card mt-4">
+                    <div class="api-object-header">
+                        <span class="api-object-icon"><i class="fa-solid fa-server"></i></span>
+                        Response Headers
+                        <button type="button" class="copy-json-btn" data-target="#mastercardResponseHeadersContent"
+                            title="Copy">
+                            <i class="fa fa-copy"></i>
+                        </button>
+                    </div>
+                    <pre class="api-json-block" id="mastercardResponseHeadersContent"></pre>
+                </div>
+
+            </div>
+        </div>
+        <div id="spinner" class=""></div>
+        <dialog class="modal fade p-0" id="encryptCardModal" aria-labelledby="encryptCardModalLabel" aria-modal="true">
+            <div class="modal-dialog modal-lg m-0">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="encryptCardModalLabel">Card Details</h5>
+                        <button type="button" class="close" id="closeEncryptCardModal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form name="encrypt-card-form" id="encrypt-card-form">
+                            <div class="row">
+                                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                                    <div class="form-group">
+                                        <label for="primaryAccountNumber">Primary Account Number
+                                            <span class="required">*</span>
+                                            <em class="fas fa-info-circle" data-toggle="tooltip" data-placement="right"
+                                                data-html="true"
+                                                title="A variable length, ISO/IEC 7812-compliant account number that is generated within account ranges associated with a BIN by a Card Issuer. <br /> <br /> Type: String(numeric)"></em>
+                                        </label>
+                                        <input class="form-control" type="text" name="primaryAccountNumber"
+                                            id="primaryAccountNumber" placeholder="Primary Account Number"
+                                            value="5506900485709082">
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                                    <div class="form-group">
+                                        <label for="panExpirationMonth">PAN Expiration Month
+                                            <span class="required">*</span>
+                                            <em class="fas fa-info-circle" data-toggle="tooltip" data-placement="right"
+                                                data-html="true"
+                                                title="Expiration month of the Card, expressed as a two-digit calendar month. <br /> <br /> Type: String(MM)"></em>
+                                        </label>
+                                        <input class="form-control" type="text" name="panExpirationMonth"
+                                            id="panExpirationMonth" placeholder="PAN Expiration Month (MM)" value="10">
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                                    <div class="form-group">
+                                        <label for="panExpirationYear">PAN Expiration Year
+                                            <span class="required">*</span>
+                                            <em class="fas fa-info-circle" data-toggle="tooltip" data-placement="right"
+                                                data-html="true"
+                                                title="Expiration year of the Card, expressed as a four-digit calendar year. <br /> <br /> Type: String(YYYY)"></em>
+                                        </label>
+                                        <input class="form-control" type="text" name="panExpirationYear"
+                                            id="panExpirationYear" placeholder="PAN Expiration Year (YYYY)"
+                                            value="2027">
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                                    <div class="form-group">
+                                        <label for="cardSecurityCode">Card Security Code
+                                            <em class="fas fa-info-circle" data-toggle="tooltip" data-placement="right"
+                                                data-html="true"
+                                                title="Card security code/CVV2 <br /> <br /> Type: String(numeric)"></em>
+                                        </label>
+                                        <input class="form-control" type="text" name="cardSecurityCode"
+                                            id="cardSecurityCode" value="123">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" id="closeEncryptCardModalFooter">Close</button>
+                        <button type="button" class="btn submit-btn" id="encryptCard">ENCRYPT CARD</button>
+                    </div>
+                </div>
+            </div>
+        </dialog>
+        <!-- Bootstrap JS and dependencies -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script>
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip();
+            });
+        </script>
+</body>
+
+</html>

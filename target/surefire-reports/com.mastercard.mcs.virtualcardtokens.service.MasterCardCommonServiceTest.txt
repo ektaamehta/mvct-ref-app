@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.mastercard.mcs.virtualcardtokens.service.MasterCardCommonServiceTest
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.877 s -- in com.mastercard.mcs.virtualcardtokens.service.MasterCardCommonServiceTest

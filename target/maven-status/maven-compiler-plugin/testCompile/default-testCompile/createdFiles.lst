@@ -1,0 +1,9 @@
+com/mastercard/mcs/virtualcardtokens/VirtualCardReferenceApplicationTests.class
+com/mastercard/mcs/virtualcardtokens/utils/KeyUtilTest.class
+com/mastercard/mcs/virtualcardtokens/service/MasterCardVCTCheckoutServiceTest.class
+com/mastercard/mcs/virtualcardtokens/controller/ConfigControllerTest.class
+com/mastercard/mcs/virtualcardtokens/service/MasterCardCommonServiceTest.class
+com/mastercard/mcs/virtualcardtokens/controller/CardControllerTest.class
+com/mastercard/mcs/virtualcardtokens/service/MasterCardCardsServiceTest.class
+com/mastercard/mcs/virtualcardtokens/exception/GlobalExceptionHandlerTest.class
+com/mastercard/mcs/virtualcardtokens/controller/CheckoutControllerTest.class

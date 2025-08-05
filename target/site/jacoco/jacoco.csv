@@ -1,0 +1,369 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.invoker.auth,HttpBearerAuth,52,6,6,0,11,3,9,1,6,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.invoker.auth,ApiKeyAuth,76,9,10,0,20,4,12,1,7,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.invoker.auth,HttpBasicAuth,44,0,8,0,13,0,10,0,6,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.invoker.auth,HttpBearerAuth,52,6,6,0,11,3,9,1,6,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.invoker.auth,ApiKeyAuth,76,9,10,0,20,4,12,1,7,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.invoker.auth,HttpBasicAuth,44,0,8,0,13,0,10,0,6,0
+virtual-card-tokens-reference-app,com.mastercard.mcs.virtualcardtokens.models,EncryptedCardResponse,0,3,0,0,0,1,0,1,0,1
+virtual-card-tokens-reference-app,com.mastercard.mcs.virtualcardtokens.models,Key,0,23,0,0,0,3,0,2,0,2
+virtual-card-tokens-reference-app,com.mastercard.mcs.virtualcardtokens.models,KeyList,0,3,0,0,0,1,0,1,0,1
+virtual-card-tokens-reference-app,com.mastercard.mcs.virtualcardtokens.models,CheckoutApiResponse,0,3,0,0,0,1,0,1,0,1
+virtual-card-tokens-reference-app,com.mastercard.mcs.virtualcardtokens,VirtualCardReferenceApplication,0,8,0,0,0,3,0,2,0,2
+virtual-card-tokens-reference-app,com.mastercard.mcs.virtualcardtokens.config,HttpClientConfig,0,18,0,0,0,5,0,3,0,3
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.api,CheckoutApi.new TypeToken() {...},6,0,0,0,1,0,1,0,1,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.api,CheckoutApi.new TypeToken() {...},6,0,0,0,1,0,1,0,1,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.api,CheckoutApi,218,0,14,0,54,0,20,0,13,0
+virtual-card-tokens-reference-app,com.mastercard.mcs.virtualcardtokens.utils,KeyUtil,0,45,0,4,0,12,0,6,0,4
+virtual-card-tokens-reference-app,com.mastercard.mcs.virtualcardtokens.exception,GlobalExceptionHandler,0,50,0,0,0,12,0,5,0,5
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,DelegatedAuthenticationModel.ModelTypeEnum,68,0,4,0,15,0,8,0,6,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,SrcTokenRequestData,296,0,38,0,64,0,38,0,19,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,Consumer.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,PushAccountReceiptCardDetails,448,0,54,0,85,0,54,0,27,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,DigitalCardStatus.Adapter,15,0,0,0,5,0,3,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,VerificationData.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,UriData.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,DeleteCardResponse.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,EnrolmentReferenceData,353,0,36,0,70,0,39,0,21,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,DelegatedAuthenticationModel.ModelTypeEnum.Adapter,15,0,0,0,5,0,3,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,Transaction.TransactionTypeEnum.Adapter,15,0,0,0,5,0,3,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,Error.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,DigitalCardStatus,68,0,4,0,15,0,8,0,6,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,AuthMethod.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,Card.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,AuthMethod.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,MfaEligibilityModel,396,0,42,0,77,0,45,0,24,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,CardPendingEvent,75,0,4,0,16,0,8,0,6,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,AdditionalDataRequested.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,Address.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,GetCardResponse.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,VerificationData.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,MfaEligibilityModel.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,UriData,212,0,26,0,45,0,28,0,15,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,Transaction,1305,0,134,0,221,0,133,0,66,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,PhoneNumber.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,ErrorReason.Adapter,15,0,0,0,5,0,3,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,CardPendingEvent.Adapter,15,0,0,0,5,0,3,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,AuthMethod.AuthenticationMethodTypeEnum.Adapter,15,0,0,0,5,0,3,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,Transaction.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,ErrorSourceType.Adapter,15,0,0,0,5,0,3,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,VerificationData,603,0,50,0,119,0,59,0,34,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,PushAccountReceiptCardDetails.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,EnrollCardResponse,497,41,58,0,89,11,58,1,29,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,Transaction.TransactionTypeEnum,103,0,4,0,20,0,8,0,6,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,PaymentData.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,PushAccountReceiptCard.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,MfaEligibilityModel.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,GetRecentTransactionsResponse.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,Consumer,224,0,24,0,49,0,27,0,15,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,Error.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,DecisioningData.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,ErrorSourceType,82,0,4,0,17,0,8,0,6,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,EnrolmentReferenceType,82,0,4,0,17,0,8,0,6,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,Card.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,Error,428,0,44,0,88,0,47,0,25,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,DelegatedAuthenticationModel.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,MaskedConsumerIdentity.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,PaymentData.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,DeleteCardResponse,223,17,26,0,45,5,27,1,14,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,EnrollCardRequest.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,EnrollCardResponse.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,DecisioningData,763,0,92,0,129,0,86,0,40,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,MaskedCard.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,Address.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,AuthMethod,410,0,52,0,77,0,50,0,24,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,VerificationType.Adapter,15,0,0,0,5,0,3,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,DigitalCardData.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,GetRecentTransactionsResponse.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,VerificationType,61,0,4,0,14,0,8,0,6,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,Address,882,0,106,0,145,0,98,0,45,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,CardholderData,582,0,70,0,105,0,68,0,33,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,ConsumerIdentityTypeDoc,61,0,4,0,14,0,8,0,6,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,Consumer.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,MaskedConsumer,286,0,28,0,60,0,32,0,18,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,PushAccountReceiptCard.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,AssuranceData.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,ErrorDetailReason,243,0,4,0,40,0,8,0,6,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,GetCardResponse,396,29,48,0,71,8,47,1,23,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,SrcTokenRequestData.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,DeleteCardResponse.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,AuthMethod.AuthenticationMethodTypeEnum,68,0,4,0,15,0,8,0,6,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,CardholderData.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,ConsumerIdentity.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,PaymentDataType,61,0,4,0,14,0,8,0,6,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,DigitalCardData.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,MaskedCard,1342,0,148,0,231,0,139,0,65,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,MaskedConsumerIdentity,286,0,28,0,60,0,32,0,18,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,ErrorDetailReason.Adapter,15,0,0,0,5,0,3,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,DigitalCardData,865,0,96,0,154,0,92,0,44,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,Card,391,40,42,0,70,12,43,2,22,2
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,ConsumerIdentityTypeDoc.Adapter,15,0,0,0,5,0,3,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,MaskedConsumer.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,MaskedCard.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,AdditionalDataRequested,196,0,24,0,45,0,27,0,15,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,EnrolmentReferenceType.Adapter,15,0,0,0,5,0,3,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,DelegatedAuthenticationModel.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,Origin,43,46,4,0,9,9,6,2,4,2
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,GetRecentTransactionsResponse,232,13,32,0,50,4,31,1,15,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,EnrollCardResponse.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,PushAccountReceiptCardDetails.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,PhoneNumber,302,0,30,0,61,0,33,0,18,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,ErrorDetail.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,PaymentToken.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,AbstractOpenApiSchema,171,0,20,0,35,0,21,0,11,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,Transaction.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,DelegatedAuthenticationModel,286,0,28,0,60,0,32,0,18,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,AssuranceData,245,0,32,0,54,0,32,0,16,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,ConsumerIdentity.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,GetCardResponse.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,DecisioningData.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,EnrolmentReferenceData.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,ErrorReason,236,0,4,0,39,0,8,0,6,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,SrcTokenRequestData.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,CardholderData.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,UriData.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,EnrollCardRequest,743,75,84,0,131,21,85,2,43,2
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,PaymentData,196,0,24,0,45,0,27,0,15,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,MaskedConsumer.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,EnrollCardRequest.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,EnrolmentReferenceData.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,ErrorDetail.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,AdditionalDataRequested.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,PaymentDataType.Adapter,15,0,0,0,5,0,3,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,AssuranceData.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,PaymentToken.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,ErrorDetail,409,0,46,0,79,0,47,0,24,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,MaskedConsumerIdentity.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,PaymentToken,441,0,50,0,80,0,49,0,24,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,PhoneNumber.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,PushAccountReceiptCard,247,0,30,0,55,0,33,0,18,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,Origin.Adapter,15,0,0,0,5,0,3,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.model,ConsumerIdentity,286,0,28,0,60,0,32,0,18,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.invoker,GzipRequestInterceptor,57,0,4,0,13,0,6,0,4,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.invoker,ServerConfiguration,66,12,10,0,13,5,7,1,2,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.invoker,ProgressRequestBody.new ForwardingSink() {...},51,0,4,0,9,0,4,0,2,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.invoker,Configuration,13,0,0,0,5,0,4,0,4,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.invoker,ProgressResponseBody,37,0,2,0,10,0,6,0,5,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.invoker,JSON.OffsetDateTimeTypeAdapter,49,10,6,0,13,5,6,2,3,2
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.invoker,JSON.DateTypeAdapter,74,3,8,0,23,1,8,1,4,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.invoker,ProgressResponseBody.new ForwardingSource() {...},46,0,4,0,6,0,4,0,2,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.invoker,Pair,45,0,6,0,19,0,9,0,6,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.invoker,JSON,93,268,8,0,31,54,15,3,11,3
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.invoker,ApiClient.new Interceptor() {...},28,6,2,0,8,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.invoker,ApiClient.new Callback() {...},65,0,0,0,13,0,3,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.invoker,ApiClient.new HostnameVerifier() {...},8,0,0,0,2,0,2,0,2,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.invoker,ApiClient.new X509TrustManager() {...},11,0,0,0,4,0,4,0,4,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.invoker,ApiResponse,27,0,0,0,10,0,5,0,5,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.invoker,ApiException,110,41,0,0,18,13,8,5,8,5
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.invoker,ApiClient,2020,209,249,3,439,46,201,11,75,11
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.invoker,GzipRequestInterceptor.new RequestBody() {...},27,0,0,0,5,0,4,0,4,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.invoker,GzipRequestInterceptor.new RequestBody() {...},28,0,0,0,7,0,4,0,4,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.invoker,StringUtil,101,0,18,0,22,0,13,0,4,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.invoker,JSON.SqlDateTypeAdapter,72,3,8,0,21,1,8,1,4,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.invoker,JSON.ByteArrayAdapter,32,3,4,0,10,1,4,1,2,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.invoker,JSON.LocalDateTypeAdapter,36,10,4,0,11,5,5,2,3,2
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.invoker,ServerVariable,15,0,0,0,6,0,1,0,1,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.invoker,ProgressRequestBody,35,0,0,0,11,0,5,0,5,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.invoker,JSON.OffsetDateTimeTypeAdapter,49,10,6,0,13,5,6,2,3,2
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.invoker,Configuration,13,0,0,0,5,0,4,0,4,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.invoker,ProgressResponseBody.new ForwardingSource() {...},46,0,4,0,6,0,4,0,2,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.invoker,ServerConfiguration,66,12,10,0,13,5,7,1,2,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.invoker,ServerVariable,15,0,0,0,6,0,1,0,1,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.invoker,ProgressRequestBody,35,0,0,0,11,0,5,0,5,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.invoker,ApiClient.new Callback() {...},65,0,0,0,13,0,3,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.invoker,ApiClient.new Interceptor() {...},28,6,2,0,8,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.invoker,ApiClient.new X509TrustManager() {...},11,0,0,0,4,0,4,0,4,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.invoker,ApiClient.new HostnameVerifier() {...},8,0,0,0,2,0,2,0,2,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.invoker,GzipRequestInterceptor,57,0,4,0,13,0,6,0,4,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.invoker,ApiClient,2010,199,249,3,438,45,201,11,75,11
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.invoker,ApiException,151,0,0,0,31,0,13,0,13,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.invoker,JSON.SqlDateTypeAdapter,72,3,8,0,21,1,8,1,4,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.invoker,ProgressRequestBody.new ForwardingSink() {...},51,0,4,0,9,0,4,0,2,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.invoker,ApiResponse,27,0,0,0,10,0,5,0,5,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.invoker,GzipRequestInterceptor.new RequestBody() {...},27,0,0,0,5,0,4,0,4,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.invoker,GzipRequestInterceptor.new RequestBody() {...},28,0,0,0,7,0,4,0,4,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.invoker,JSON.DateTypeAdapter,74,3,8,0,23,1,8,1,4,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.invoker,StringUtil,101,0,18,0,22,0,13,0,4,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.invoker,JSON,93,328,8,0,31,64,15,3,11,3
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.invoker,Pair,45,0,6,0,19,0,9,0,6,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.invoker,ProgressResponseBody,37,0,2,0,10,0,6,0,5,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.invoker,JSON.ByteArrayAdapter,32,3,4,0,10,1,4,1,2,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.invoker,JSON.LocalDateTypeAdapter,36,10,4,0,11,5,5,2,3,2
+virtual-card-tokens-reference-app,com.mastercard.mcs.virtualcardtokens.service,MasterCardVCTCheckoutService,0,251,0,6,0,51,0,6,0,3
+virtual-card-tokens-reference-app,com.mastercard.mcs.virtualcardtokens.service,MasterCardCardsService,0,356,0,2,0,75,0,7,0,6
+virtual-card-tokens-reference-app,com.mastercard.mcs.virtualcardtokens.service,MasterCardCommonService,0,141,0,6,0,36,0,9,0,6
+virtual-card-tokens-reference-app,com.mastercard.mcs.virtualcardtokens.service,MasterCardVCTCheckoutService.new TypeToken() {...},0,6,0,0,0,1,0,1,0,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.api,TransactionsApi,263,0,22,0,63,0,24,0,13,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.api,TransactionsApi.new TypeToken() {...},6,0,0,0,1,0,1,0,1,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.api,TransactionsApi.new TypeToken() {...},6,0,0,0,1,0,1,0,1,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.api,CardsApi.new TypeToken() {...},6,0,0,0,1,0,1,0,1,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.api,CardsApi.new TypeToken() {...},6,0,0,0,1,0,1,0,1,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.api,CardsApi.new TypeToken() {...},6,0,0,0,1,0,1,0,1,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.api,CardsApi.new TypeToken() {...},6,0,0,0,1,0,1,0,1,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.api,CardsApi.new TypeToken() {...},6,0,0,0,1,0,1,0,1,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.api,CardsApi.new TypeToken() {...},6,0,0,0,1,0,1,0,1,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.card.api,CardsApi,752,0,68,0,162,0,57,0,23,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,VerificationType,39,22,4,0,8,6,5,3,3,3
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,DigitalAccountReference.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,Error.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,JoseHeader,488,0,42,0,94,0,48,0,27,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,Consent.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,MaskedAddress.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,DpaData.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,DynamicData.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,CheckoutResponse.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,DigitalAccountReferenceType.Adapter,15,0,0,0,5,0,3,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,MaskedConsumerIdentity.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,MaskedCard.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,AssuranceData.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,AssuranceData.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,DigitalCardStatus,75,0,4,0,16,0,8,0,6,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,ErrorDetailReason.Adapter,12,3,0,0,4,1,2,1,2,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,SellerData.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,DigitalCardFeatureContentType.Adapter,15,0,0,0,5,0,3,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,CardPendingEvent.Adapter,15,0,0,0,5,0,3,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,CheckoutRequest,943,72,118,0,160,20,111,2,52,2
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,DigitalAccountReference.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,DigitalAccountCredentials.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,Consent,346,0,42,0,65,0,42,0,21,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,DpaTransactionOptions.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,DigitalCardFeature,429,0,40,0,86,0,47,0,27,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,AcceptanceChannelTechnology,39,57,4,0,8,11,5,3,3,3
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,DigitalCardFeature.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,PaymentOptions.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,SellerData.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,Payload.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,Acquirer.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,VerificationData,594,0,52,0,115,0,60,0,34,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,DelegatedAuthenticationModels.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,Card.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,PaymentOptions,196,0,24,0,45,0,27,0,15,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,VerificationType.Adapter,15,0,0,0,5,0,3,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,MaskedConsumer,1037,0,114,0,180,0,111,0,54,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,CheckoutResponseJWSPayload.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,ComplianceSettings.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,ErrorDetail,409,0,46,0,79,0,47,0,24,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,SrcTokenResultsData,279,0,34,0,55,0,35,0,18,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,IdentityProvider.Adapter,15,0,0,0,5,0,3,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,AssuranceData,245,0,32,0,54,0,32,0,16,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,Acquirer.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,Address.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,Acquirer,279,0,34,0,55,0,35,0,18,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,Payload.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,DigitalAccountReference,286,0,28,0,60,0,32,0,18,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,MaskedConsumerIdentity,337,0,34,0,70,0,38,0,21,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,AcceptanceChannelData.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,PaymentOptions.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,Error,390,54,46,0,71,18,42,6,19,6
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,PhoneNumber.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,SrcTokenResultsData.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,DCF.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,DCF.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,VerificationData.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,CheckoutResponseJWS.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,PaymentToken,508,0,58,0,90,0,56,0,27,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,DynamicData,358,0,40,0,69,0,41,0,21,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,CommunicationsConsent.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,DynamicData.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,DelegatedAuthenticationModels,282,0,28,0,59,0,32,0,18,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,CheckoutRequest.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,DigitalAccountCredentials,224,0,24,0,49,0,27,0,15,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,AcceptanceChannelRelatedData,321,0,32,0,69,0,37,0,21,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,JoseHeader.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,DigitalAccountCredentials.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,AcceptanceChannelData.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,MaskedAddress,910,0,106,0,150,0,98,0,45,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,JoseHeader.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,ThreeDsOutputData.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,SrcTokenRequestData.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,ConsumerData.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,MaskedCard.PaymentCardTypeEnum.Adapter,15,0,0,0,5,0,3,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,ApplicationType,82,0,4,0,17,0,8,0,6,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,SrcTokenResultsData.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,MaskedCard.PaymentCardTypeEnum,89,0,4,0,18,0,8,0,6,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,MaskedConsumerIdentity.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,CheckoutResponse.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,Browser,757,0,86,0,131,0,85,0,42,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,Browser.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,Address.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,ErrorDetailReason,208,0,4,0,35,0,8,0,6,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,Card,760,0,88,0,130,0,83,0,39,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,SrcTokenRequestData.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,DigitalCardData.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,DpaData,346,0,42,0,65,0,42,0,21,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,ThreeDsOutputData,212,0,26,0,45,0,28,0,15,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,ComplianceSettings.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,IdentityProvider,61,0,4,0,14,0,8,0,6,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,ThreeDsOutputData.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,Consent.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,TransactionAmount.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,DigitalCardData,861,0,96,0,153,0,97,0,49,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,ErrorSourceType,82,0,4,0,17,0,8,0,6,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,DpaData.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,ConsumerIdentityType.Adapter,15,0,0,0,5,0,3,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,PaymentToken.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,DigitalAccountReferenceType,39,36,4,0,8,8,5,3,3,3
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,AcceptanceChannelData,247,0,30,0,55,0,33,0,18,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,CheckoutResponseJWS,292,40,30,0,57,13,33,3,18,3
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,Address,882,0,106,0,145,0,98,0,45,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,MaskedConsumer.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,ThreeDsInputData,247,0,30,0,55,0,33,0,18,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,ErrorSourceType.Adapter,12,3,0,0,4,1,2,1,2,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,PaymentToken.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,SrcTokenRequestData,212,0,26,0,45,0,28,0,15,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,Payload,824,64,106,0,147,18,102,2,49,2
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,ConsumerData.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,DynamicDataType.Adapter,15,0,0,0,5,0,3,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,DpaTransactionOptions,650,0,80,0,124,0,77,0,37,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,DelegatedAuthenticationModels.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,SellerData,212,0,26,0,45,0,28,0,15,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,ComplianceSettings,400,0,48,0,85,0,51,0,27,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,DynamicDataType,39,22,4,0,8,6,5,3,3,3
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,AcceptanceChannelRelatedData.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,PhoneNumber,302,0,30,0,61,0,33,0,18,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,CheckoutResponseJWS.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,DCF,397,0,48,0,75,0,48,0,24,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,ErrorDetail.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,ErrorDetail.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,MaskedCard,1591,0,180,0,273,0,167,0,77,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,DigitalCardFeature.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,Error.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,AcceptanceChannelRelatedData.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,DpaTransactionOptions.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,AcceptanceChannelTechnology.Adapter,15,0,0,0,5,0,3,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,AbstractOpenApiSchema,171,0,20,0,35,0,21,0,11,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,DigitalCardFeatureContentType,82,0,4,0,17,0,8,0,6,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,ConsumerIdentityType,75,0,4,0,16,0,8,0,6,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,CommunicationsConsent.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,MaskedCard.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,PhoneNumber.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,ThreeDsPreference,39,36,4,0,8,8,5,3,3,3
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,DigitalCardData.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,ThreeDsPreference.Adapter,15,0,0,0,5,0,3,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,MaskedAddress.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,AcceptanceChannelType,39,22,4,0,8,6,5,3,3,3
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,MaskedConsumer.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,CheckoutResponseJWSPayload.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,Card.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,CommunicationsConsent,373,0,30,0,83,0,45,0,30,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,CheckoutResponse,195,29,23,1,38,11,23,4,11,4
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,VerificationData.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,Browser.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,PayloadTypeIndicator,39,43,4,0,8,9,5,3,3,3
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,TransactionAmount,282,0,28,0,59,0,32,0,18,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,TransactionAmount.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,ThreeDsInputData.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,CardPendingEvent,75,0,4,0,16,0,8,0,6,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,AcceptanceChannelType.Adapter,15,0,0,0,5,0,3,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,CheckoutRequest.CustomTypeAdapterFactory.new TypeAdapter() {...},268,0,28,0,39,0,17,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,ThreeDsInputData.CustomTypeAdapterFactory,26,3,2,0,7,1,2,1,1,1
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,ConsumerStatus.Adapter,15,0,0,0,5,0,3,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,ApplicationType.Adapter,15,0,0,0,5,0,3,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,ConsumerData,882,0,106,0,145,0,98,0,45,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,ConsumerStatus,75,0,4,0,16,0,8,0,6,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,CheckoutResponseJWSPayload,758,0,84,0,140,0,84,0,42,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,DigitalCardStatus.Adapter,15,0,0,0,5,0,3,0,3,0
+virtual-card-tokens-reference-app,com.mcs.virtualcardtokens.checkout.model,PayloadTypeIndicator.Adapter,15,0,0,0,5,0,3,0,3,0
+virtual-card-tokens-reference-app,com.mastercard.mcs.virtualcardtokens.controller,ConfigController,0,39,0,0,0,8,0,2,0,2
+virtual-card-tokens-reference-app,com.mastercard.mcs.virtualcardtokens.controller,CardController,0,79,0,0,0,23,0,6,0,6
+virtual-card-tokens-reference-app,com.mastercard.mcs.virtualcardtokens.controller,CheckoutController,0,21,0,0,0,6,0,2,0,2

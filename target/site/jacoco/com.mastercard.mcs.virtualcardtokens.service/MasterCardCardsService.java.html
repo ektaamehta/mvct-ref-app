@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>MasterCardCardsService.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">virtual-card-tokens-reference-app</a> &gt; <a href="index.source.html" class="el_package">com.mastercard.mcs.virtualcardtokens.service</a> &gt; <span class="el_source">MasterCardCardsService.java</span></div><h1>MasterCardCardsService.java</h1><pre class="source lang-java linenums">package com.mastercard.mcs.virtualcardtokens.service;
+
+import java.io.IOException;
+import java.security.GeneralSecurityException;
+import java.text.ParseException;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.UUID;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.mastercard.mcs.virtualcardtokens.constants.AppConstants;
+import com.mastercard.mcs.virtualcardtokens.models.GetCardServiceRequest;
+import com.mastercard.mcs.virtualcardtokens.models.Key;
+import com.mastercard.mcs.virtualcardtokens.utils.KeyUtil;
+import com.mcs.virtualcardtokens.card.api.CardsApi;
+import com.mcs.virtualcardtokens.card.api.TransactionsApi;
+import com.mcs.virtualcardtokens.card.invoker.ApiException;
+import com.mcs.virtualcardtokens.card.invoker.ApiResponse;
+import com.mcs.virtualcardtokens.card.model.DeleteCardResponse;
+import com.mcs.virtualcardtokens.card.model.EnrollCardRequest;
+import com.mcs.virtualcardtokens.card.model.EnrollCardResponse;
+import com.mcs.virtualcardtokens.card.model.GetCardResponse;
+import com.mcs.virtualcardtokens.card.model.GetRecentTransactionsResponse;
+import com.nimbusds.jose.EncryptionMethod;
+import com.nimbusds.jose.JOSEException;
+import com.nimbusds.jose.JWEAlgorithm;
+import com.nimbusds.jose.JWEHeader;
+import com.nimbusds.jose.JWEObject;
+import com.nimbusds.jose.Payload;
+import com.nimbusds.jose.crypto.RSAEncrypter;
+import com.nimbusds.jose.jwk.RSAKey;
+
+@Service
+public class MasterCardCardsService extends MasterCardCommonService {
+
+    private final KeyUtil keyUtil;
+
+<span class="fc" id="L42">    public MasterCardCardsService(KeyUtil keyUtil) {</span>
+<span class="fc" id="L43">        this.keyUtil = keyUtil;</span>
+<span class="fc" id="L44">    }</span>
+
+    public ResponseEntity&lt;Object&gt; enrollCard(EnrollCardRequest enrollCardRequest)
+            throws IOException, GeneralSecurityException {
+<span class="fc" id="L48">        Map&lt;String, Object&gt; enrollCardResponse = new HashMap&lt;&gt;();</span>
+        try {
+<span class="fc" id="L50">            CardsApi api = new CardsApi(getCardApiClient());</span>
+<span class="fc" id="L51">            ApiResponse&lt;EnrollCardResponse&gt; resp = api.putCardWithHttpInfo(enrollCardRequest);</span>
+<span class="fc" id="L52">            enrollCardResponse.put(AppConstants.KEY_BODY, resp.getData());</span>
+<span class="fc" id="L53">            enrollCardResponse.put(AppConstants.KEY_HEADERS, resp.getHeaders());</span>
+<span class="fc" id="L54">            enrollCardResponse.put(AppConstants.KEY_STATUS_CODE, resp.getStatusCode());</span>
+
+<span class="fc" id="L56">            return ResponseEntity.status(resp.getStatusCode()).body(enrollCardResponse);</span>
+<span class="fc" id="L57">        } catch (ApiException e) {</span>
+<span class="fc" id="L58">            enrollCardResponse.put(AppConstants.KEY_BODY, e.getResponseBody());</span>
+<span class="fc" id="L59">            enrollCardResponse.put(AppConstants.KEY_HEADERS, e.getResponseHeaders());</span>
+<span class="fc" id="L60">            enrollCardResponse.put(AppConstants.KEY_STATUS_CODE, e.getCode());</span>
+
+<span class="fc" id="L62">            return ResponseEntity.status(e.getCode()).body(enrollCardResponse);</span>
+        }
+    }
+
+    public ResponseEntity&lt;Object&gt; deleteCard(String cardId, String serviceId, UUID srcClientId,
+            String srcCorrelationId, String reason, String requestor, String srcDpaId)
+            throws IOException, GeneralSecurityException {
+<span class="fc" id="L69">        Map&lt;String, Object&gt; deleteCardResponse = new HashMap&lt;&gt;();</span>
+        try {
+<span class="fc" id="L71">            CardsApi api = new CardsApi(getCardApiClient());</span>
+<span class="fc" id="L72">            ApiResponse&lt;DeleteCardResponse&gt; resp = api.deleteCardWithHttpInfo(</span>
+                    cardId, srcClientId, serviceId, srcDpaId, srcCorrelationId, null, reason, requestor);
+<span class="fc" id="L74">            deleteCardResponse.put(AppConstants.KEY_BODY, resp.getData());</span>
+<span class="fc" id="L75">            deleteCardResponse.put(AppConstants.KEY_HEADERS, resp.getHeaders());</span>
+<span class="fc" id="L76">            deleteCardResponse.put(AppConstants.KEY_STATUS_CODE, resp.getStatusCode());</span>
+
+<span class="fc" id="L78">            return ResponseEntity.status(resp.getStatusCode()).body(deleteCardResponse);</span>
+<span class="fc" id="L79">        } catch (ApiException e) {</span>
+<span class="fc" id="L80">            deleteCardResponse.put(AppConstants.KEY_BODY, e.getResponseBody());</span>
+<span class="fc" id="L81">            deleteCardResponse.put(AppConstants.KEY_HEADERS, e.getResponseHeaders());</span>
+<span class="fc" id="L82">            deleteCardResponse.put(AppConstants.KEY_STATUS_CODE, e.getCode());</span>
+
+<span class="fc" id="L84">            return ResponseEntity.status(e.getCode()).body(deleteCardResponse);</span>
+        }
+    }
+
+    public ResponseEntity&lt;Object&gt; getCardTransactions(String cardId, String serviceId, String srcClientId,
+            String srciTransactionId, String transactionsFromTimestamp) throws IOException, GeneralSecurityException {
+<span class="fc" id="L90">        Map&lt;String, Object&gt; getCardTransactionsResponse = new HashMap&lt;&gt;();</span>
+        try {
+<span class="fc" id="L92">            TransactionsApi transactionsApi = new TransactionsApi(getCardApiClient());</span>
+<span class="fc" id="L93">            ApiResponse&lt;GetRecentTransactionsResponse&gt; resp = transactionsApi.getTransactionHistoryWithHttpInfo(</span>
+<span class="fc" id="L94">                    cardId, UUID.fromString(srcClientId), serviceId, srciTransactionId, transactionsFromTimestamp);</span>
+<span class="fc" id="L95">            getCardTransactionsResponse.put(AppConstants.KEY_BODY, resp.getData());</span>
+<span class="fc" id="L96">            getCardTransactionsResponse.put(AppConstants.KEY_HEADERS, resp.getHeaders());</span>
+<span class="fc" id="L97">            getCardTransactionsResponse.put(AppConstants.KEY_STATUS_CODE, resp.getStatusCode());</span>
+
+<span class="fc" id="L99">            return ResponseEntity.status(resp.getStatusCode()).body(getCardTransactionsResponse);</span>
+<span class="fc" id="L100">        } catch (ApiException e) {</span>
+<span class="fc" id="L101">            getCardTransactionsResponse.put(AppConstants.KEY_BODY, e.getResponseBody());</span>
+<span class="fc" id="L102">            getCardTransactionsResponse.put(AppConstants.KEY_HEADERS, e.getResponseHeaders());</span>
+<span class="fc" id="L103">            getCardTransactionsResponse.put(AppConstants.KEY_STATUS_CODE, e.getCode());</span>
+
+<span class="fc" id="L105">            return ResponseEntity.status(e.getCode()).body(getCardTransactionsResponse);</span>
+        }
+    }
+
+    public ResponseEntity&lt;Object&gt; getCard(GetCardServiceRequest request) throws IOException, GeneralSecurityException {
+<span class="fc" id="L110">        Map&lt;String, Object&gt; getCardResponse = new HashMap&lt;&gt;();</span>
+        try {
+<span class="fc" id="L112">            CardsApi api = new CardsApi(getCardApiClient());</span>
+<span class="fc" id="L113">            ApiResponse&lt;GetCardResponse&gt; resp = api.getCardWithHttpInfo(</span>
+<span class="fc" id="L114">                    request.getCardId(),</span>
+<span class="fc" id="L115">                    UUID.fromString(request.getSrcClientId()),</span>
+<span class="fc" id="L116">                    request.getServiceId(),</span>
+<span class="fc" id="L117">                    request.getSrcDpaId(),</span>
+<span class="fc" id="L118">                    request.getSrcCorrelationId(),</span>
+                    null, // srciTransactionId not needed now
+<span class="fc" id="L120">                    request.isTokenRequested(),</span>
+<span class="fc" id="L121">                    request.getKeyFingerprintId(),</span>
+<span class="fc" id="L122">                    request.getFlowId());</span>
+<span class="fc" id="L123">            getCardResponse.put(AppConstants.KEY_BODY, resp.getData());</span>
+<span class="fc" id="L124">            getCardResponse.put(AppConstants.KEY_HEADERS, resp.getHeaders());</span>
+<span class="fc" id="L125">            getCardResponse.put(AppConstants.KEY_STATUS_CODE, resp.getStatusCode());</span>
+
+<span class="fc" id="L127">            return ResponseEntity.status(resp.getStatusCode()).body(getCardResponse);</span>
+<span class="fc" id="L128">        } catch (ApiException e) {</span>
+<span class="fc" id="L129">            getCardResponse.put(AppConstants.KEY_BODY, e.getResponseBody());</span>
+<span class="fc" id="L130">            getCardResponse.put(AppConstants.KEY_HEADERS, e.getResponseHeaders());</span>
+<span class="fc" id="L131">            getCardResponse.put(AppConstants.KEY_STATUS_CODE, e.getCode());</span>
+
+<span class="fc" id="L133">            return ResponseEntity.status(e.getCode()).body(getCardResponse);</span>
+        }
+    }
+
+    public String getEncryptedData(Object data)
+            throws JsonProcessingException, ParseException, JOSEException {
+<span class="fc" id="L139">        ObjectMapper objectMapper = new ObjectMapper();</span>
+
+<span class="fc" id="L141">        String cardPayLoad = objectMapper.writeValueAsString(data);</span>
+
+        String mastercardKeysUrl;
+        String masetercardEncryptionKid;
+
+<span class="fc bfc" id="L146" title="All 2 branches covered.">        if (production) {</span>
+<span class="fc" id="L147">            mastercardKeysUrl = &quot;https://src.mastercard.com/keys&quot;;</span>
+<span class="fc" id="L148">            masetercardEncryptionKid = &quot;20230227135603-prod-fpan-encryption-src-mastercard-int&quot;;</span>
+        } else {
+<span class="fc" id="L150">            mastercardKeysUrl = &quot;https://sandbox.src.mastercard.com/keys&quot;;</span>
+<span class="fc" id="L151">            masetercardEncryptionKid = &quot;20230207223521-sandbox-fpan-encryption-src-mastercard-int&quot;;</span>
+        }
+
+<span class="fc" id="L154">        Key key = keyUtil.getKey(mastercardKeysUrl, masetercardEncryptionKid);</span>
+
+<span class="fc" id="L156">        String keyString = objectMapper.writeValueAsString(key);</span>
+<span class="fc" id="L157">        RSAKey rsaEncryptionKey = RSAKey.parse(keyString);</span>
+<span class="fc" id="L158">        RSAEncrypter rsaEncrypter = new RSAEncrypter(rsaEncryptionKey);</span>
+<span class="fc" id="L159">        JWEObject jweObject = new JWEObject(</span>
+                new JWEHeader.Builder(JWEAlgorithm.RSA_OAEP_256, EncryptionMethod.A128GCM)
+<span class="fc" id="L161">                        .keyID(masetercardEncryptionKid).build(),</span>
+                new Payload(cardPayLoad));
+<span class="fc" id="L163">        jweObject.encrypt(rsaEncrypter);</span>
+
+<span class="fc" id="L165">        return jweObject.serialize();</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.13.202504020838</span></div></body></html>

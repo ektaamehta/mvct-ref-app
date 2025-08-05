@@ -1,0 +1,22 @@
+[
+    {
+        "name": "WALLET",
+        "value": "WALLET"
+    },
+    {
+        "name": "CARDHOLDER",
+        "value": "CARDHOLDER"
+    },
+    {
+        "name": "MERCHANT",
+        "value": "MERCHANT"
+    },
+    {
+        "name": "ISSUER",
+        "value": "ISSUER"
+    },
+    {
+        "name": "EXISTING_CREDENTIAL",
+        "value": "EXISTING_CREDENTIAL"
+    }
+]

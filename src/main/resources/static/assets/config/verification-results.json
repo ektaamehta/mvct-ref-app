@@ -1,0 +1,22 @@
+[
+    {
+        "name": "--Select--",
+        "value": ""
+    },
+    {
+        "name": "Verified",
+        "value": "01"
+    },
+    {
+        "name": "Not Verified",
+        "value": "02"
+    },
+    {
+        "name": "Not Performed",
+        "value": "03"
+    },
+    {
+        "name": "Not Required",
+        "value": "04"
+    }
+]

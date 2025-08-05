@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>MCS Virtual Card Tokens - Cards API </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8" />
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/fontawesome/css/all.min.css" />
+
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/jquery.validate.min.js"></script>
+
+    <script src="/assets/js/environment.js"></script>
+
+    <script src="/assets/js/retrieve-transactions-by-card-id.js"></script>
+    <script src="/assets/js/common.js"></script>
+
+
+    <!-- Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="icon" type="image/svg" href="/assets/images/favicon.svg">
+
+</head>
+
+<body>
+    <div class="container-fluid p-0">
+        <!-- Main Header Start Here -->
+        <nav class="mc-oba-header">
+            <div class="mc-oba-header-left">
+                <img src="/assets/images/mc_symbol_opt_73_3x.png" alt="Mastercard" class="mc-oba-logo" />
+                <a href="https://developer.mastercard.com/mastercard-checkout-solutions/documentation/use-cases/virtual-card-tokens/"
+                    class="mc-oba-developers-link" target="_blank">
+                    developers<i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                </a>
+            </div>
+            <div class="mc-oba-header-center">
+                <span class="mc-oba-header-app">REFERENCE APP</span>
+                <span class="mc-oba-header-title">MCS - Virtual Card Tokens</span>
+            </div>
+            <div class="mc-oba-header-right">
+                <a href="https://developer.mastercard.com/mastercard-checkout-solutions/documentation/api-reference/apis/"
+                    class="mc-oba-github-link" target="_blank">
+                    API Reference
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+        </nav>
+        <!-- Main Header End Here -->
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mt-0 mb-0 api-form-box">
+            <!-- API Name Header Start Here -->
+            <div class="row mb-3 api-name-border pb-3">
+                <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-2 d-flex align-items-center">
+                    <a href="/" class="text-decoration-none">
+                        <img class="back-logo" src="/assets/images/back_icon@2x.png" alt="Back Logo" />
+                    </a>
+                </div>
+                <div
+                    class="col-xl-11 col-lg-11 col-md-11 col-sm-11 col-10 d-flex align-items-center justify-content-center p-0">
+                    <span class="api-name-label"> MCS Virtual Card Tokens - Cards API </span>
+                </div>
+            </div>
+            <!-- API Name Header End Here -->
+
+            <!-- Sub Navigation Start Here -->
+            <div class="row mt-3">
+                <div
+                    class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 d-flex align-items-center justify-content-center api-menu-sub-label text-center padding-top-none">
+                    <a class="api-names-box" href="enroll-card.html?action=ENROLL" data-action="ENROLL">
+                        <label class="api-label" for="enroll-card">ENROLL CARD</label>
+                    </a>
+                </div>
+                <div
+                    class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 d-flex align-items-center justify-content-center api-menu-sub-label text-center padding-top-none">
+                    <a class="api-names-box" href="get-card-by-id.html?action=GET" data-action="GET">
+                        <label class="api-label" for="get-card">GET CARD BY ID</label>
+                    </a>
+                </div>
+                <div
+                    class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 d-flex align-items-center justify-content-center api-menu-sub-label text-center padding-top-none">
+                    <a class="api-names-box" href="delete-card-by-id.html?action=DELETE" data-action="DELETE">
+                        <label class="api-label" for="delete-card">DELETE CARD BY ID</label>
+                    </a>
+                </div>
+                <div
+                    class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 d-flex align-items-center justify-content-center api-menu-sub-label text-center padding-top-none">
+                    <a class="api-names-box" href="#" data-action="RETRIEVE">
+                        <label class="api-label" for="retrieve-transactions">RETRIEVE TRANSACTIONS</label>
+                    </a>
+                </div>
+            </div>
+            <!-- Sub Navigation Ends Here -->
+
+
+            <div class="container-fluid p-0 pt-4 pb-0">
+                <h2 class="mc-page-title">Retrieve Transactions</h2>
+                <div class="mc-page-subtitle">Retrieve transactions by card ID</div>
+
+                <span class="mb-3 styled-line"></span>
+            </div>
+            <div class="content">
+
+                <form id="retrieve-transactions-by-card-id-form">
+                    <input type="hidden" id="actionMode" value="RETRIEVE" />
+
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label for="cardId">Card Id:
+                                <span data-toggle="tooltip" data-html="true"
+                                    title="<b>Info:</b><br>Required. The srcDigitalCardId of the card enrolled in Mastercard Checkout Solutions (MCS).<br><br>Required: True<br><br>Example: 9ajNArkAR66zqYyHCn0rCA000000000000US   <br><br>Type: String">
+                                    <i class="fas fa-info-circle"></i>
+                                </span>
+                            </label>
+                            <input type="text" id="cardId" name="cardId" class="form-control"
+                                value="FR1afm6qS7Kkd1QoJZlusw000000000000GB" required>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label for="srcClientId">SRC Client Id:
+                                <span data-toggle="tooltip" data-html="true"
+                                    title="<b>Info:</b><br>Required. pattern: ^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$ A unique identifier assigned by Mastercard during onboarding which signifies the responsible party Integrating to Mastercard Checkout Solutions (MCS).<br><br>Required: True<br><br>Example: eccbf087-f159-4d69-b31d-00bec75c0474<br><br>Type: String">
+                                    <i class="fas fa-info-circle"></i>
+                                </span>
+                            </label>
+                            <input type="text" id="srcClientId" name="srcClientId" class="form-control" value=""
+                                required>
+                        </div>
+
+                        <div class="col-md-6 form-group">
+                            <label for="serviceId">Service Id:
+                                <span data-toggle="tooltip" data-html="true"
+                                    title="<b>Info:</b><br>Required. A unique identifier assigned by Mastercard for which tokens are created uniquely for the entity onboarded.<br><br>Required: True<br><br>Example: SECURE_COF_MERCHANT_OBO#SRC4M-OBO-ALL4PETS#01<br><br>Type: String">
+                                    <i class="fas fa-info-circle"></i>
+                                </span>
+                            </label>
+                            <input type="text" id="serviceId" name="serviceId" class="form-control" value="" required>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <label for="srciTransactionId">Srci Transaction Id:
+                                <span data-toggle="tooltip" data-html="true"
+                                    title="<b>Info:</b><br>Optional. Transaction reference generated by the checkout initiator.<br><br>Example: 18df482e-31f2-4289-b0d7-4d768b72d3ed<br><br>Type: String">
+                                    <i class="fas fa-info-circle"></i>
+                                </span>
+                            </label>
+                            <input type="text" id="srciTransactionId" name="srciTransactionId" class="form-control"
+                                value="">
+                        </div>
+
+                        <div class="col-md-6 form-group">
+                            <label for="transactionsFromTimestamp">Transactions From Timestamp:
+                                <span data-toggle="tooltip" data-html="true"
+                                    title="<b>Info:</b><br>Optional. Optional Parameter to provide Transaction history records originating after Date-Time represented by this parameter. This parameter MUST not past 30 days from current date-time and also not after current date-time. Supports taking value in UTC epoch milliseconds format.<br><br>Example: 2016-05-04T12:08:56.123-07:00<br><br>Type: String">
+                                    <i class="fas fa-info-circle"></i>
+                                </span>
+                            </label>
+                            <input type="text" id="transactionsFromTimestamp" name="transactionsFromTimestamp"
+                                class="form-control" value="">
+                        </div>
+                    </div>
+
+
+                    <!-- END FIELDS -->
+                    <button type="submit" class="btn submit-btn mt-3">Submit</button>
+                </form>
+
+                <div class="api-object-card mt-4" style="display: none;">
+                    <div class="api-object-header">
+                        <span class="api-object-icon"><i class="fa-solid fa-arrow-right"></i></span>
+                        Request Headers
+                        <button type="button" class="copy-json-btn" data-target="#requestHeadersContent" title="Copy">
+                            <i class="fa fa-copy"></i>
+                        </button>
+                    </div>
+                    <pre class="api-json-block" id="requestHeadersContent"></pre>
+                </div>
+
+                <div class="api-object-card mt-4">
+                    <div class="api-object-header">
+                        <span class="api-object-icon"><i class="fa-solid fa-code"></i></span>
+                        Request Object
+                        <button type="button" class="copy-json-btn" data-target="#requestBodyContent" title="Copy">
+                            <i class="fa fa-copy"></i>
+                        </button>
+                    </div>
+                    <pre class="api-json-block" id="requestBodyContent"></pre>
+                </div>
+
+                <div class="api-object-card mt-4">
+                    <div class="api-object-header">
+                        <span class="api-object-icon"><i class="fa-solid fa-code-branch"></i></span>
+                        Response Object
+                        <button type="button" class="copy-json-btn" data-target="#responseContent" title="Copy">
+                            <i class="fa fa-copy"></i>
+                        </button>
+                    </div>
+                    <pre class="api-json-block" id="responseContent"></pre>
+                </div>
+
+                <div class="api-object-card mt-4">
+                    <div class="api-object-header">
+                        <span class="api-object-icon"><i class="fa-solid fa-server"></i></span>
+                        Response Headers
+                        <button type="button" class="copy-json-btn" data-target="#mastercardResponseHeadersContent"
+                            title="Copy">
+                            <i class="fa fa-copy"></i>
+                        </button>
+                    </div>
+                    <pre class="api-json-block" id="mastercardResponseHeadersContent"></pre>
+                </div>
+
+            </div>
+        </div>
+        <div id="spinner" class=""></div>
+        <!-- Bootstrap JS and dependencies -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script>
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip();
+            });
+        </script>
+</body>
+
+</html>

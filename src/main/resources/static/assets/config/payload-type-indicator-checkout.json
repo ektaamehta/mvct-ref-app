@@ -1,0 +1,22 @@
+[
+    {
+        "name": "--Select--",
+        "value": ""
+    },
+    {
+        "name": "SUMMARY",
+        "value": "SUMMARY"
+    },
+    {
+        "name": "FULL",
+        "value": "FULL"
+    },
+    {
+        "name": "PAYMENT",
+        "value": "PAYMENT"
+    },
+    {
+        "name": "NON_PAYMENT",
+        "value": "NON_PAYMENT"
+    }
+]

@@ -1,0 +1,9 @@
+/workspaces/mvct-ref-app/src/test/java/com/mastercard/mcs/virtualcardtokens/VirtualCardReferenceApplicationTests.java
+/workspaces/mvct-ref-app/src/test/java/com/mastercard/mcs/virtualcardtokens/controller/CardControllerTest.java
+/workspaces/mvct-ref-app/src/test/java/com/mastercard/mcs/virtualcardtokens/controller/CheckoutControllerTest.java
+/workspaces/mvct-ref-app/src/test/java/com/mastercard/mcs/virtualcardtokens/controller/ConfigControllerTest.java
+/workspaces/mvct-ref-app/src/test/java/com/mastercard/mcs/virtualcardtokens/exception/GlobalExceptionHandlerTest.java
+/workspaces/mvct-ref-app/src/test/java/com/mastercard/mcs/virtualcardtokens/service/MasterCardCardsServiceTest.java
+/workspaces/mvct-ref-app/src/test/java/com/mastercard/mcs/virtualcardtokens/service/MasterCardCommonServiceTest.java
+/workspaces/mvct-ref-app/src/test/java/com/mastercard/mcs/virtualcardtokens/service/MasterCardVCTCheckoutServiceTest.java
+/workspaces/mvct-ref-app/src/test/java/com/mastercard/mcs/virtualcardtokens/utils/KeyUtilTest.java

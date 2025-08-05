@@ -1,0 +1,14 @@
+[
+    {
+        "name": "--Select--",
+        "value": ""
+    },
+    {
+        "name": "Payment Transaction",
+        "value": "01"
+    },
+    {
+        "name": "Add Card/Card Enrollment",
+        "value": "02"
+    }
+]

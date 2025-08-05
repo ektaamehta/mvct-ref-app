@@ -1,0 +1,18 @@
+[
+    {
+        "name": "--Select--",
+        "value": ""
+    },
+    {
+        "name": "NONE",
+        "value": "NONE"
+    },
+    {
+        "name": "SELF",
+        "value": "SELF"
+    },
+    {
+        "name": "ONBEHALF",
+        "value": "ONBEHALF"
+    }
+]

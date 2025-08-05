@@ -1,0 +1,15 @@
+[
+    {
+        "name": "Authentication Attempted",
+        "value": "01"
+    },
+    {
+        "name": "Authenticated",
+        "value": "02"
+    },
+    {
+        "name": "Merchant Risk",
+        "value": "06"
+    }
+]
+

@@ -1,0 +1,30 @@
+[
+    {
+        "name": "--Select--",
+        "value": ""
+    },
+    {
+        "name": "QR_CODE",
+        "value": "QR_CODE"
+    },
+    {
+        "name": "NFC",
+        "value": "NFC"
+    },
+    {
+        "name": "WIFI",
+        "value": "WIFI"
+    },
+    {
+        "name": "BLUETOOTH",
+        "value": "BLUETOOTH"
+    },
+    {
+        "name": "INTENT",
+        "value": "INTENT"
+    },
+    {
+        "name": "SOUND",
+        "value": "SOUND"
+    }
+]

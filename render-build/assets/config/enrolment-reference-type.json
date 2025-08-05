@@ -1,0 +1,22 @@
+[
+    {
+        "name": "--Select--",
+        "value": ""
+    },
+    {
+        "name": "EXISTING_TOKEN_UNIQUE_REFERENCE",
+        "value": "EXISTING_TOKEN_UNIQUE_REFERENCE"
+    },
+    {
+        "name": "TOKEN_UNIQUE_REFERENCE",
+        "value": "TOKEN_UNIQUE_REFERENCE"
+    },
+    {
+        "name": "SRC_DIGITAL_CARD_ID",
+        "value": "SRC_DIGITAL_CARD_ID"
+    },
+    {
+        "name": "PUSH_ACCOUNT_RECEIPT",
+        "value": "PUSH_ACCOUNT_RECEIPT"
+    }
+]

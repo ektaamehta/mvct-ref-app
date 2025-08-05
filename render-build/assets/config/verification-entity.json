@@ -1,0 +1,22 @@
+[
+    {
+        "name": "--Select--",
+        "value": ""
+    },
+    {
+        "name": "Integrator",
+        "value": "01"
+    },
+    {
+        "name": "Mastercard Checkout Solutions (MCS)",
+        "value": "02"
+    },
+    {
+        "name": "Participating Issuer",
+        "value": "03"
+    },
+     {
+        "name": "Others",
+        "value": "06"
+    }
+]

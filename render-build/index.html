@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>MCS VIRTUAL CARD TOKENS REFERENCE APPLICATION</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8" />
+    <link href="assets/fonts/MarkForMC-Nrw.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/fontawesome/css/all.min.css" />
+    <script src="assets/js/environment.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap/bootstrap.min.js"></script>
+    <link rel="icon" type="image/svg" href="assets/images/favicon.svg">
+</head>
+
+<body>
+    <!-- OBA-style top header -->
+    <nav class="mc-oba-header">
+        <div class="mc-oba-header-left">
+            <img src="assets/images/mc_symbol_opt_73_3x.png" alt="Mastercard" class="mc-oba-logo" />
+            <a href="https://developer.mastercard.com/mastercard-checkout-solutions/documentation/use-cases/virtual-card-tokens/"
+                class="mc-oba-developers-link" target="_blank">
+                developers<i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+        </div>
+        <div class="mc-oba-header-center">
+            <span class="mc-oba-header-app">REFERENCE APP</span>
+            <span class="mc-oba-header-title">MCS - Virtual Card Tokens</span>
+        </div>
+        <div class="mc-oba-header-right">
+            <a href="https://developer.mastercard.com/mastercard-checkout-solutions/documentation/api-reference/apis/"
+                class="mc-oba-github-link" target="_blank">
+                API Reference
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Dashboard Section -->
+    <div class="mc-dashboard-container">
+        <div class="mc-dashboard-title">Select a Virtual Card Tokens API</div>
+        <div class="mc-dashboard-desc">
+            Explore Mastercard Virtual Card Tokens APIs below. Click any API to view, test, or review documentation.
+        </div>
+        <div class="mc-api-card-list">
+
+            <!-- Cards API -->
+            <div class="mc-api-card">
+                <div class="mc-api-card-title">Cards API</div>
+                <div class="mc-api-card-status">Live</div>
+                <div class="mc-api-card-desc">
+                    Enroll cards, get card details, delete cards, and retrieve card transaction history.
+                </div>
+                <div class="mc-api-card-actions mc-api-card-actions-grid">
+                    <a href="views/enroll-card.html?action=ENROLL" class="mc-api-card-btn mc-btn-outline">Enroll New
+                        Card</a>
+                    <a href="views/get-card-by-id.html?action=GET" class="mc-api-card-btn mc-btn-outline">Get Card By
+                        ID</a>
+                    <a href="views/delete-card-by-id.html?action=DELETE" class="mc-api-card-btn mc-btn-outline">Delete
+                        Card By ID</a>
+                    <a href="views/retrieve-transactions-by-card-id.html?action=RETRIEVE"
+                        class="mc-api-card-btn mc-btn-outline">Retrieve Transactions</a>
+                </div>
+            </div>
+
+            <!-- Checkout API -->
+            <div class="mc-api-card">
+                <div class="mc-api-card-title">Checkout API</div>
+                <div class="mc-api-card-status">Live</div>
+                <div class="mc-api-card-desc">
+                    Perform secure checkout and payment authorizations using enrolled virtual cards.
+                </div>
+                <div class="mc-api-card-actions">
+                    <a href="views/checkout-api-integration.html" class="mc-api-card-btn mc-btn-outline">Checkout
+                        API</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="footer-style">
+        © 2025 MCS Virtual Card Tokens Reference App by Mastercard
+    </footer>
+</body>
+
+</html>
